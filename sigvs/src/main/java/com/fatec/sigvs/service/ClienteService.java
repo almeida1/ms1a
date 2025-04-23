@@ -52,7 +52,7 @@ public class ClienteService implements IClienteServico {
 			}
 		} catch (Exception e) {
 			logger.info(">>>>>> clienteservico - erro nao esperado metodo cadastrar " + e.getMessage());
-			return new ClienteResponse(false, "Erro não esperado ao cadastrar cliente.", null);
+			return new ClienteResponse(false, "Erro não esperado ao cadastrar cliente." + e.getMessage(), null);
 		}
 	}
 
